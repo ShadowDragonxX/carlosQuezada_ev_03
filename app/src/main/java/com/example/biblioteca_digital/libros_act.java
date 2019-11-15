@@ -17,7 +17,7 @@ public class libros_act extends AppCompatActivity {
     private EditText costo;
     private Button btn;
     private TextView txt;
-    private String[] valoresLibros= {"5000","12000","25000","5000","3000","1000"};
+    private String[] valoresLibros= {"5000","12000","25000","5000","3000","1000","10000"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
