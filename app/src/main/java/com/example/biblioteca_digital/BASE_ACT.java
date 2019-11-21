@@ -44,11 +44,32 @@ public class BASE_ACT extends AppCompatActivity {
         SQLiteDatabase BIBLIOTECA = admin.getWritableDatabase();
             String codigo = et1.getText().toString();
 
-            BIBLIOTECA.delete("ordenadores", "codigo= "+codigo, null);
+            BIBLIOTECA.delete("odernadores", "codigo= "+codigo, null);
             BIBLIOTECA.close();
 
             Toast.makeText(this,"Producto eliminado: "+ codigo ,Toast.LENGTH_SHORT).show();
 
 
+
+
+    }
+    public void modificarOrdenador(View view)
+    {
+        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this,"Gestion", null, 1);
+        SQLiteDatabase BIBLIOTECA = admin.getWritableDatabase();
+
+        String codigo = et1.getText().toString();
+
+        ContentValues cont = new ContentValues();
+        cont.put("codigo", et1.getText().toString());
+        cont.put("nombre", et2.getText().toString());
+        cont.put("precio", et3.getText().toString());
+
+
+        if (!et1.getText().toString().isEmpty())
+        {
+            BIBLIOTECA.update("ordenadores",cont, "codigo= "+codigo, null);
+            Toast.makeText(this,"Producto actualizado: "+ codigo ,Toast.LENGTH_SHORT).show();
+        }
     }
 }
