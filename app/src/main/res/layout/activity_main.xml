@@ -72,4 +72,29 @@
         android:layout_marginTop="88dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="77dp"
+        android:layout_marginLeft="77dp"
+        android:layout_marginTop="192dp"
+        android:onClick="abrirMaps"
+        app:layout_constraintStart_toEndOf="@+id/progressBar"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:srcCompat="@drawable/maps" />
+
+    <ImageButton
+        android:id="@+id/imageButton8"
+        android:layout_width="49dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="69dp"
+        android:layout_marginLeft="69dp"
+        android:layout_marginBottom="153dp"
+        android:onClick="abrirGit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/githubDos" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

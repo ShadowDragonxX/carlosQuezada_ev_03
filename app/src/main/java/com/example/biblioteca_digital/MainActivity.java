@@ -71,5 +71,15 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
+    public void abrirMaps(View view)
+    {
+        Intent i = new Intent(this,Maps_ACT.class);
+        startActivity(i);
+    }
+    public void abrirGit(View view)
+    {
+        Intent i = new Intent(this,Github_act.class);
+        startActivity(i);
+    }
 }
 
