@@ -65,20 +65,25 @@ public class MainActivity extends AppCompatActivity {
             String pass = txt2.getText().toString();
 
             Intent i = new Intent(getBaseContext(),HOME_ACT.class);
-            startActivity(i);
+
             i.putExtra("usuario",user);
             i.putExtra("pass",pass);
+
+            startActivity(i);
+
 
         }
     }
     public void abrirMaps(View view)
     {
-        Intent i = new Intent(this,Maps_ACT.class);
+        Intent i = new Intent(this,Maps_act.class);
         startActivity(i);
     }
     public void abrirGit(View view)
     {
         Intent i = new Intent(this,Github_act.class);
+        String rellenar[]={"Farenheith","Revival","El alquimista"};
+        i.putExtra("rellenar",rellenar);
         startActivity(i);
     }
 }
